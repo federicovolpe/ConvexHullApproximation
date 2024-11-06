@@ -1,0 +1,41 @@
+\chapter{Conclusioni}
+
+\section{Sintesi dei risultati ottenuti}
+Tra gli algoritmi analizzati, i due che hanno mostrato i risultati più promettenti 
+sono CuttingEdge e BoxCutting, i quali adottano approcci opposti per la risoluzione del problema. 
+CuttingEdge parte dal poliedro completo e, ad ogni passo, riduce il numero di 
+iperpiani che definiscono la sua approssimazione. BoxCutting, al contrario, 
+inizia da una forma approssimata con il numero minimo di lati e aggiunge gradualmente 
+nuovi iperpiani fino a ricostruire il poliedro originale.\\
+
+Nonostante CuttingEdge si sia dimostrato superiore in termini di prestazioni, 
+e di stabilità al variare delle dimensioni dei politopi 
+grazie al ridotto numero di calcoli dei volumi, entrambi gli algoritmi 
+risultano particolarmente adatti a scenari specifici:
+BoxCutting per casi in cui si desidera ottenere un'approssimazione con 
+un numero molto ridotto di iperpiani, oppure per la creazione di approssimazioni con poliedri aperti,
+mentre CuttingEdge si presta meglio in casi in cui è necessaria un'approssimazione con $h$ vicina ad $E$,
+oppure quando il numero di dimensioni del politopo da approssimare è elevato.
+
+\section{Limiti del progetto}
+I principali limiti riscontrati dell'approccio descritto sono i seguenti:
+gli algoritmi proposti non sono stati ideati per l'approssimazioni con politopi aperti, 
+il che limita la possibilità di creare approssimazioni con un numero di iperpiani 
+inferiore a $dim + 1$. Allo stesso modo, non è possibile approssimare poliedri aperti. 
+Tuttavia, questa restrizione riguarda solo una specifica categoria di poliedri, 
+che non influisce sulla validità generale dell'approccio per politopi chiusi.\\
+
+Un altro aspetto riguarda l'implementazione: gli algoritmi utilizzati non sono 
+stati parallelizzati, quindi i tempi di esecuzione attualmente riflettono 
+l'elaborazione single-core. Di conseguenza, la velocità di calcolo dipende 
+dall'hardware disponibile, in particolare dalla CPU 
+(2,2 GHz Intel Core i7 quad-core utilizzata attualmente). 
+Parallelizzando l'algoritmo, si potrebbero ottenere miglioramenti significativi 
+nei tempi di esecuzione, soprattutto su sistemi multi-core.\\
+
+Infine, è importante sottolineare che il numero limitato di algoritmi 
+considerati potrebbe aver ridotto le possibilità di individuare ulteriori 
+miglioramenti o varianti. Questo approccio si è concentrato su un set specifico 
+di tecniche, e l'inclusione di altri algoritmi, non trattati in questo documento, 
+potrebbe fornire nuove opportunità di ottimizzazione o confronto, 
+ampliando il quadro delle soluzioni esplorabili.

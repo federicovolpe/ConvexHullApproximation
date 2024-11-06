@@ -1,0 +1,180 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{nDvolume}{report}{}
+      \name{author}{1}{}{%
+        {{hash=26354e0068ffe39fefb65052e3c95929}{%
+           family={Abhijit\bibnamedelima Bhattacharya},
+           familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Bikromadittya\bibnamedelima Mondal},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Kamlesh\bibnamedelimb Kumar\bibnamedelima Dubey},
+           suffixi={K\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {B. P. Poddar Institute of Management}%
+        {Technology, Kolkata, India}%
+      }
+      \strng{namehash}{26354e0068ffe39fefb65052e3c95929}
+      \strng{fullhash}{26354e0068ffe39fefb65052e3c95929}
+      \strng{bibnamehash}{26354e0068ffe39fefb65052e3c95929}
+      \strng{authorbibnamehash}{26354e0068ffe39fefb65052e3c95929}
+      \strng{authornamehash}{26354e0068ffe39fefb65052e3c95929}
+      \strng{authorfullhash}{26354e0068ffe39fefb65052e3c95929}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Volume of an n-dimensional Polyhedron}
+      \field{type}{techreport}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.heldermann-verlag.de/jgg/jgg27/j27h1bhat.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.heldermann-verlag.de/jgg/jgg27/j27h1bhat.pdf
+      \endverb
+    \endentry
+    \entry{PolyhedraDefinition}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ec94d94cc487dd71939a90cbeaaf47d0}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University, Department of Electrical Engineering}%
+      }
+      \strng{namehash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \strng{fullhash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \strng{bibnamehash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \strng{authorbibnamehash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \strng{authornamehash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \strng{authorfullhash}{ec94d94cc487dd71939a90cbeaaf47d0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Convex Optimization}
+      \field{type}{techreport}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf
+      \endverb
+    \endentry
+    \entry{JarvisMarchAlgorithm}{report}{}
+      \name{author}{1}{}{%
+        {{hash=cdd63cba133d7edfeb8410ca774b0187}{%
+           family={Maggio},
+           familyi={M\bibinitperiod},
+           given={L.\bibnamedelimi Cinque;\bibnamedelimb C.\bibnamedelimi Di},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cdd63cba133d7edfeb8410ca774b0187}
+      \strng{fullhash}{cdd63cba133d7edfeb8410ca774b0187}
+      \strng{bibnamehash}{cdd63cba133d7edfeb8410ca774b0187}
+      \strng{authorbibnamehash}{cdd63cba133d7edfeb8410ca774b0187}
+      \strng{authornamehash}{cdd63cba133d7edfeb8410ca774b0187}
+      \strng{authorfullhash}{cdd63cba133d7edfeb8410ca774b0187}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A BSP realisation of Jarvis's algorithm}
+      \field{type}{techreport}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/797603
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/797603
+      \endverb
+    \endentry
+    \entry{probabilityConvexhull2d}{report}{}
+      \name{author}{1}{}{%
+        {{hash=2b6d61641d806a03c6822052132aea27}{%
+           family={Valt},
+           familyi={V\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Independent Researcher}%
+      }
+      \strng{namehash}{2b6d61641d806a03c6822052132aea27}
+      \strng{fullhash}{2b6d61641d806a03c6822052132aea27}
+      \strng{bibnamehash}{2b6d61641d806a03c6822052132aea27}
+      \strng{authorbibnamehash}{2b6d61641d806a03c6822052132aea27}
+      \strng{authornamehash}{2b6d61641d806a03c6822052132aea27}
+      \strng{authorfullhash}{2b6d61641d806a03c6822052132aea27}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probability that n random points are in convex position}
+      \field{type}{techreport}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://refubium.fu-berlin.de/bitstream/handle/fub188/17874/1994_01.pdf?sequence=1&isAllowed=y
+      \endverb
+      \verb{url}
+      \verb https://refubium.fu-berlin.de/bitstream/handle/fub188/17874/1994_01.pdf?sequence=1&isAllowed=y
+      \endverb
+    \endentry
+    \entry{ValtrAlgorithm}{report}{}
+      \name{author}{1}{}{%
+        {{hash=a44155074192ceea1c8194ceea0d601b}{%
+           family={Verdonschot},
+           familyi={V\bibinitperiod},
+           given={Sander},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44155074192ceea1c8194ceea0d601b}
+      \strng{fullhash}{a44155074192ceea1c8194ceea0d601b}
+      \strng{bibnamehash}{a44155074192ceea1c8194ceea0d601b}
+      \strng{authorbibnamehash}{a44155074192ceea1c8194ceea0d601b}
+      \strng{authornamehash}{a44155074192ceea1c8194ceea0d601b}
+      \strng{authorfullhash}{a44155074192ceea1c8194ceea0d601b}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Generating Random Convex Polygons}
+      \field{type}{techreport}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://cglab.ca/~sander/misc/ConvexGeneration/convex.html
+      \endverb
+      \verb{url}
+      \verb https://cglab.ca/~sander/misc/ConvexGeneration/convex.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

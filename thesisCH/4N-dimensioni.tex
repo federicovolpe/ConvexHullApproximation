@@ -1,0 +1,96 @@
+\chapter{Elevazione a n-dimensioni}
+
+\section{Passi logici}
+Date le conclusioni precedenti, si è deciso di procedere con lo sviluppo n-dimensionale
+delgi algoritmi CuttingEdge e BoxCutting.
+Poiché entrambi prevedono il calcolo delle aree, in più dimensioni richiederanno il 
+calcolo di volumi n-dimensionali. 
+Questi, come è noto, con l'aumentare delle dimensioni, avranno un grado di complessità
+di calcolo sempre maggiore. Sono perciò previsti tempi di esecuzione gradualmente maggiori.
+
+L'elevazione dell'algoritmo da semplice codice Java richiede l'utilizzo di strumenti 
+avanzati, come Polymake, che consente di manipolare i poliedri con maggiore facilità, 
+e del linguaggio Perl, con cui il software Polymake mostra una forte integrazione.
+
+\subsection{L'algoritmo CuttingEdge n-dimensionale}
+L'algoritmo CuttingEdge viene applicato a un poliedro di dimensione arbitraria 
+con un budget prestabilito di iperpiani disponibili $h$. 
+Il politopo iniziale utilizzato per l'approssimazione coincide con il poliedro originale.
+
+Il processo per ogni faccia del poliedro si articola nei seguenti passi:
+
+\begin{enumerate} 
+    
+    \item Individuazione dei coefficienti della faccia.
+    
+    \item Costruzione del politopo dato dal prolungamento degli iperpiani adiacenti
+    a questa (inversione dei coefficienti della faccia);
+
+    \item Individuazione del volume del politopo costruito;
+    
+    \item Selezione del'iperpiano producente il politopo con il volume inferiore fra
+    tutti;
+
+\end{enumerate}
+
+Una volta individuato l'iperpiano migliore, questo viene rimosso dal politopo di approssimazione.
+
+\subsection{L'algoritmo BoxCutting n-dimensionale}
+Dato un poliedro in una dimensione arbitraria e $h$ rappresentante
+il budget di iperpiani disponibili, 
+viene costruito il parallelepipedo (Bounding Box) n dimensionale che lo racchiude.\\
+
+L'algoritmo poi per ciascuna faccia procede come segue:
+
+\begin{enumerate}
+    
+    \item Individuazione dei coefficienti della faccia;
+
+    \item Costruzione del politopo incluso fra la faccia e la Bounding Box;
+    
+    \item Calcolo del volume del suddetto politopo;
+
+    \item Selezione dell'iperpiano con il rispettivo volume maggiore;
+
+\end{enumerate}
+
+Una volta determinato l'iperpiano scelto, viene rimosso dalla bounding box il corrispettivo
+volume compreso. L'insieme di iperpiani scelti determinerà il poliedro di approssimazione.
+
+\section{Il Codice}
+Per il calcolo del volume di un poliedro n-dimensionale esistono differenti metodi illustrati 
+in questo documento: \cite{nDvolume} in cui è stata trovata una formula specifica.
+
+Grazie all'utilizzo del software Polymake molte delle operazioni computazionalmente
+rilevanti, come l'inversione dei semispazi o la rimozione/aggiunta di 
+iperpiani ad un politopo, possono essere facilmente integrate nel codice.\\
+Per la futura analisi è di importanza rilevante anche considerare che l'algoritmo 
+CuttingEdge è stato dotato di una mappa per risparmiare operazioni di 
+calcolo dei volumi ripetitive.
+
+\subsection*{I politopi creati}
+
+Esempio visivo in diverse angolazioni di uno step di approssimazione di un poliedro 
+in 3 dimensioni.
+
+\begin{figure}[H]
+    \centering
+    
+    \newcounter{immagine} % Definizione del contatore
+    \forloop{immagine}{1}{\value{immagine} < 5}{%
+        \includegraphics[width=0.2\textwidth]{media/3Dproof/CuttingEdge/immagine\theimmagine.png} % Uso di \theimmagine per il numero del contatore
+    }
+    
+    \caption{Esempio di approssimazione iniziale dell'algoritmo CuttingEdge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    
+    \newcounter{img} % Definizione del contatore
+    \forloop{img}{1}{\value{img} < 5}{%
+        \includegraphics[width=0.2\textwidth]{media/3Dproof/BoxCutting/immagine\theimg.png} % Uso di \theimmagine per il numero del contatore
+    }
+    
+    \caption{Esempio di approssimazione iniziale dell'algoritmo BoxCutting}
+\end{figure}

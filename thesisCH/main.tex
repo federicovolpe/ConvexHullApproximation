@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{report}
+% o article, book, ...
+
+% TODO inserire vari packages (todonotes, ecc.)
+\usepackage{fancybox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{lipsum}% Per inserire testo a caso in attesa di realizzare i capitoli
+\usepackage{listings}
+\lstset{
+	% 	language=bash
+	frame=single,
+	breaklines=true,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+	basicstyle=\ttfamily\footnotesize
+}
+\usepackage[style=numeric,
+%citestyle=authoryear
+]{biblatex}
+\addbibresource{Biblio.bib}
+\usepackage{epigraph} % per le frasi inizio capitolo
+\usepackage{fancyhdr}
+\setlength{\marginparwidth}{3cm}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[disable]{todonotes}
+%\usepackage{refcheck}
+
+%%%%%%% aggiunti da me %%%%%%%%%%
+\usepackage[font=small,labelfont=bf]{caption}  % Aggiungi il pacchetto caption se non lo hai già
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{forloop}
+\usepackage[margin=1in]{geometry} % Imposta tutti i margini a 1 inch
+\setlength{\parindent}{0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\include{0Introduction}
+
+\tableofcontents
+
+\include{1ContestoEMotivazione}
+
+\include{2AlgoritmiProposti}
+
+\include{3Analisi}
+
+\include{4N-dimensioni}
+
+\include{5N-dim_analisi}
+
+\include{6Conclusioni}
+
+
+
+\hrule
+
+
+\printbibliography[title={Bibliografia}]
+\addcontentsline{toc}{chapter}{Bibliografia}
+
+\end{document}

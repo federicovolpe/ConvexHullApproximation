@@ -1,0 +1,34 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Contesto e Motivazione}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contesto e Rilevanza del Problema}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Definizione del Guscio Convesso}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Approcci alla Risoluzione del Problema}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}possibili campi di applicazioni del progetto}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Motivazione della ricerca}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Algoritmi proposti}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Approssimazioni tramite analisi delle proprietà dei vertici}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Ipotesi di Algoritmo Cutting Smaller Angle (CSA)}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Ipotesi di Algoritmo Cutting Smaller Angle 2 (CSA2)}{7}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Ipotesi di Algoritmo Cutting Larger Angle (CLA)}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Ipotesi di Algoritmo Cutting Larger Angle 2 (CLA2)}{9}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Ipotesi di Algoritmo Distance From G (DFG)}{9}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Approssimazioni tramite analisi delle proprietà degli iperpiani}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ipotesi di Algoritmo BoxCutting}{11}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Ipotesi di Algoritmo Less Area}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Ipotesi di Algoritmo Cutting Edges}{14}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Analisi delle sperimentazioni}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tipo di testing}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Analisi dei dati}{16}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Elevazione a n-dimensioni}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Passi logici}{18}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}L'algoritmo CuttingEdge n-dimensionale}{18}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}L'algoritmo BoxCutting n-dimensionale}{18}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Il Codice}{19}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Analisi a n-dimensioni}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tipo di testing}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Analisi dei dati}{20}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusioni}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sintesi dei risultati ottenuti}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Limiti del progetto}{23}{section.6.2}%
+\contentsline {chapter}{Bibliografia}{26}{chapter*.31}%

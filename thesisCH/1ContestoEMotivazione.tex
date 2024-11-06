@@ -1,0 +1,131 @@
+\chapter{Contesto e Motivazione}
+
+\section{Contesto e Rilevanza del Problema}
+
+Il problema trattato in questo documento si colloca nel campo della geometria computazionale, 
+dove, in uno spazio a $D$ dimensioni, viene definita una regione ammissibile tramite un 
+numero finito di iperpiani $E$, nota come \textit{Convex Hull}.
+A causa del numero elevato di iperpiani e dell'alta dimensionalità che possono caratterizzare
+questa regione, la manipolazione di questa può diventare particolarmente complessa 
+e con tempi di elaborazione non indifferenti.
+Risulta perciò necessario trovare un modo per poter rendere meno onerosi questi calcoli.\\
+
+L'elaborato in questione si occupa di fornire metodi di approssimazione di gusci
+convessi in \textit{D} dimensioni, le euristiche proposte devono soddisfare le seguenti condizioni:
+\begin{itemize}
+    \item Il politopo di approssimazione deve essere definito da un numero 
+    di iperpiani (budget) fornito a priori $h$ per limitare la complessità della rappresentazione.
+    \item Il politopo di approssimazione deve includere completamente la regione 
+    definita dal guscio convesso originale.
+    \item Quando il budget di iperpiani \textit{h} coincide con il numero di iperpiani del
+    politopo di partenza \textit{E}, l'approssimazione e il politopo devono coincidere.
+\end{itemize}
+
+Tuttavia, l'alta dimensionalità e la complessità dei calcoli volumetrici rappresentano 
+sfide significative che richiedono algoritmi efficienti per garantire una buona 
+approssimazione in tempi ragionevoli.
+
+\pagebreak
+
+\section{Definizione del Guscio Convesso}
+
+Il guscio convesso, o \textit{convex hull}, può essere definito in diversi modi equivalenti.\\
+Una definizione rigorosa è fornita nel capitolo 2.2.4 di "Convex Optimization" 
+\cite*{PolyhedraDefinition}, dove si afferma:
+
+
+\begin{quote}
+"Il guscio convesso è definito come l'insieme dei punti che soddisfano un numero 
+finito di uguaglianze e disuguaglianze lineari secondo la seguente formula:
+
+\[
+\mathcal{P} = \left\{ x \; \middle| \; a_j^T x \leq b_j, \; j = 1, \ldots, m, \; c_j^T x = d_j, \; j = 1, \ldots, p \right\}.
+\]
+dove:
+\begin{itemize}
+    \item \( a_j \) vettore dei coefficienti delle disuguaglianze,
+    \item \( b_j \) termine costante delle disuguaglianze,
+    \item \( m \) numero totale di disuguaglianze,
+    \item \( c_j \) vettore dei coefficienti delle uguaglianze,
+    \item \( d_j \) termine noto delle uguaglianze,
+    \item \( p \) numero totale di uguaglianze.
+\end{itemize}
+Un poliedro è quindi l'intersezione di un numero finito di semispazi \\
+e iperpiani."
+\end{quote}
+
+Pertanto, è giusto notare che i poliedri possono essere chiusi,
+aperti o anche vuoti in base alla loro definizione e alle condizioni 
+imposte dai vincoli lineari. In questo caso ci si occuperà dell'approssimazione
+di gusci convessi che siano chiusi e limitati.
+
+
+\section{Approcci alla Risoluzione del Problema}
+
+Diversi approcci per risolvere il problema dell'approssimazione del politopo:
+
+\begin{itemize}
+    \item \textbf{Approccio di Ottimizzazione}: 
+    Tramite l'utilizzo di solutori si risolve un problema di Minimizzazione dell'area 
+    inammissibile inclusa nel poliedro di approssimazione.
+    \item \textbf{Approccio Geometrico}: 
+    Vengono sfruttati differenti metodi geometrici per poter generare un 
+    poliedro che meglio rappresenta quello di partenza.
+\end{itemize}
+
+Siccome gli algoritmi che si vogliono generare devono essere quanto 
+piu prevedibili e di tempi di esecuzione noti, in questo documento si è scelto 
+di effettuare uno studio comparativo di algoritmi che adottano approcci Geometrici.
+Verranno dapprima ipotizzati differenti algoritmi per l'approssimazione 
+di poliedri in 2 dimensioni, le cui performance verranno analizzate e paragonate successivamente.
+Fra questi algoritmi, verranno selezionati quelli più promettenti per un'implementazione 
+su poliedri in dimensioni più elevate tramite l'aiuto di software appositi. 
+
+\section{possibili campi di applicazioni del progetto}
+Una delle applicazioni più rilevanti del progetto è legata al concetto di collisione, 
+ampiamente utilizzato nel campo della robotica. Un'approssimazione per eccesso di un 
+corpo può rivelarsi fondamentale per prevenire contatti involontari durante le 
+manovre dei robot, migliorando così la loro sicurezza e l'efficienza operativa. 
+Inoltre, tale approccio può accelerare i calcoli necessari per determinare gli spazi 
+di manovra, consentendo di spostarsi in ambienti complessi in modo più rapido 
+e preciso.\\
+
+L'approssimazione di un politopo n-dimensionale offre anche interessanti prospettive 
+nella risoluzione di problemi di ottimizzazione. 
+I gusci convessi sono frequentemente utilizzati in vari algoritmi di ottimizzazione, 
+e in alcune situazioni, una soluzione subottimale derivante da un'approssimazione 
+del guscio può essere considerata accettabile, specialmente in contesti dove la 
+velocità di calcolo è cruciale.\\
+
+Nel campo della computer vision, il progetto ha il potenziale di portare significativi 
+avanzamenti nel riconoscimento di forme complesse e nel tracciamento di oggetti. 
+La capacità di rappresentare oggetti tridimensionali come poliedri convessi potrebbe 
+facilitare l'identificazione e il monitoraggio di oggetti in movimento, migliorando 
+l'interazione tra i sistemi visivi e gli ambienti circostanti.\\
+
+Nei problemi di clustering, approssimare i dati come un poliedro convesso può essere 
+utile per identificare la forma e la struttura dei cluster. 
+Ad esempio, i cluster di dati in spazi ad alta dimensione potrebbero essere approssimati 
+come poliedri convessi, il che permette una migliore comprensione delle loro 
+caratteristiche geometriche.\\
+
+\section{Motivazione della ricerca} 
+Il problema del calcolo del guscio convesso è stato ampiamente trattato in letteratura, 
+con diverse soluzioni proposte, tra cui QuickHull\cite{QuickHull} e 
+JarvisMarch\cite{JarvisMarch}. 
+Tuttavia, ciò che distingue questo studio è l'obiettivo di sviluppare un metodo 
+in grado di fornire un'approssimazione per eccesso del guscio convesso, 
+con un numero di iperpiani fissato a priori.
+
+In letteratura, esistono già studi relativi all'approssimazione del guscio convesso, 
+che offrono soluzioni piuttosto precise, come descritto nel lavoro di riferimento 
+\cite{CHApproximation}. 
+Tuttavia, tali soluzioni non soddisfano pienamente la condizione fondamentale 
+di inclusione del guscio convesso originario (condizione n.1) senza l'uso di 
+adattamenti post-processing.
+
+Gli algoritmi proposti in questo studio si distinguono proprio per l'originalità 
+con cui affrontano il problema, offrendo una soluzione che rispetta la condizione 
+di inclusione senza la necessità di aggiustamenti successivi. 
+Questo rende il lavoro presentato non solo innovativo, ma anche potenzialmente 
+più efficiente nel contesto specifico dell'approssimazione di gusci convessi.
